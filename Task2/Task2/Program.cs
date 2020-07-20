@@ -11,14 +11,13 @@ namespace Task2
 {
     class Program
     {
-        static string Path = Directory.GetCurrentDirectory() + "\\picsfolder";
+        private static string Path = Directory.GetCurrentDirectory() + "\\picsfolder";
 
-        static string[] Pics = Directory.GetFiles(Path).Where(s=>s.EndsWith(".bmp") || s.EndsWith(".jpg") || s.EndsWith(".png")).ToArray();
+        private static string[] Pics = Directory.GetFiles(Path).Where(s => s.EndsWith(".bmp") || s.EndsWith(".jpg") || s.EndsWith(".png")).ToArray();
 
 
         static void Main(string[] args)
         {
-            int count = Environment.ProcessorCount;
             Parallel.For(0, Pics.Length, RotatePic);
         }
 
@@ -27,11 +26,9 @@ namespace Task2
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             Console.WriteLine($"Image is rotating... Thread id: {Thread.CurrentThread.ManagedThreadId}");
+
             Image img = null;
-            using (FileStream stream = new FileStream(Pics[i], FileMode.Open, FileAccess.Read))
-            {
-                img = Image.FromStream(stream);
-            }
+            img = Image.FromFile(Pics[i]);
 
             if (img != null)
             {
