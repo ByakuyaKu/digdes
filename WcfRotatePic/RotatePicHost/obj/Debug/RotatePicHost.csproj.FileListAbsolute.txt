@@ -1,0 +1,11 @@
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\bin\Debug\RotatePicHost.exe.config
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\bin\Debug\RotatePicHost.exe
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\bin\Debug\RotatePicHost.pdb
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\bin\Debug\WcfRotatePic.dll
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\bin\Debug\WcfRotatePic.pdb
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\bin\Debug\WcfRotatePic.dll.config
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\obj\Debug\RotatePicHost.csprojAssemblyReference.cache
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\obj\Debug\RotatePicHost.csproj.CoreCompileInputs.cache
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\obj\Debug\RotatePicHost.csproj.CopyComplete
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\obj\Debug\RotatePicHost.exe
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicHost\obj\Debug\RotatePicHost.pdb
