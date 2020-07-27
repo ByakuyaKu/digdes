@@ -1,0 +1,7 @@
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\bin\Release\RotatePicConsoleClient.exe.config
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\bin\Release\RotatePicConsoleClient.exe
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\bin\Release\RotatePicConsoleClient.pdb
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\obj\Release\RotatePicConsoleClient.csprojAssemblyReference.cache
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\obj\Release\RotatePicConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\obj\Release\RotatePicConsoleClient.exe
+C:\Users\Toga\source\repos\WcfRotatePic\RotatePicConsoleClient\obj\Release\RotatePicConsoleClient.pdb

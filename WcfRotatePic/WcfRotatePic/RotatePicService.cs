@@ -15,17 +15,20 @@ namespace WcfRotatePic
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "RotatePicService" в коде и файле конфигурации.
     public class RotatePicService : IRotatePicService
     {
-        public string Path { get; set; }
-        public string[] Pics { get; set; }
-        public int Angle { get; set; }
+        private string Path { get; set; }
+        private string[] Pics { get; set; }
+        private int Angle { get; set; }
+        private string Output = "";
 
-        RotateFlipType[] angles = new RotateFlipType[3] { RotateFlipType.Rotate90FlipNone, RotateFlipType.Rotate180FlipNone, RotateFlipType.Rotate270FlipNone };
+        private RotateFlipType[] angles = new RotateFlipType[3] { RotateFlipType.Rotate90FlipNone, RotateFlipType.Rotate180FlipNone, RotateFlipType.Rotate270FlipNone };
+
 
         public void RotatePic(int i)
         {
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            Console.WriteLine($"Image is rotating... Thread id: {Thread.CurrentThread.ManagedThreadId}");
+            //Console.WriteLine($"Image is rotating... Thread id: {Thread.CurrentThread.ManagedThreadId}");
+            Output += $"Image is rotating... Thread id: {Thread.CurrentThread.ManagedThreadId}\n";
 
             Image img = null;
             img = Image.FromFile(Pics[i]);
@@ -34,20 +37,22 @@ namespace WcfRotatePic
             {
                 img.RotateFlip(angles[Angle]);
                 img.Save(Pics[i]);
-                Console.WriteLine($"Image rotated... Thread id: {Thread.CurrentThread.ManagedThreadId}");
+                //Console.WriteLine($"Image rotated... Thread id: {Thread.CurrentThread.ManagedThreadId}");
+                Output += $"Image rotated... Thread id: {Thread.CurrentThread.ManagedThreadId}\n";
             }
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
-            Console.WriteLine($"Image rotated for: {String.Format("{0:000}", ts.Milliseconds)} ms. Thread id: {Thread.CurrentThread.ManagedThreadId}");
+            //Console.WriteLine($"Image rotated for: {String.Format("{0:000}", ts.Milliseconds)} ms. Thread id: {Thread.CurrentThread.ManagedThreadId}");
+            Output += $"Image rotated for: {String.Format("{0:000}", ts.Milliseconds)} ms. Thread id: {Thread.CurrentThread.ManagedThreadId}\n";
         }
 
-        public void StartRotatePic(string path, int angle)
+        public string StartRotatePic(string path, int angle)
         {
             Angle = angle;
             Pics = Directory.GetFiles(path).Where(s => s.ToLower().EndsWith(".bmp") || s.ToLower().EndsWith(".jpg") || s.ToLower().EndsWith(".png")).ToArray();
 
             Parallel.For(0, Pics.Length, RotatePic);
-            Console.ReadKey();
+            return Output;
         }
     }
 }

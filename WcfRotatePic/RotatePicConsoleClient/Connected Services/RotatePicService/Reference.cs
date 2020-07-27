@@ -22,10 +22,10 @@ namespace RotatePicConsoleClient.RotatePicService {
         System.Threading.Tasks.Task RotatePicAsync(int i);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRotatePicService/StartRotatePic", ReplyAction="http://tempuri.org/IRotatePicService/StartRotatePicResponse")]
-        void StartRotatePic(string path, int angle);
+        string StartRotatePic(string path, int angle);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRotatePicService/StartRotatePic", ReplyAction="http://tempuri.org/IRotatePicService/StartRotatePicResponse")]
-        System.Threading.Tasks.Task StartRotatePicAsync(string path, int angle);
+        System.Threading.Tasks.Task<string> StartRotatePicAsync(string path, int angle);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,11 +63,11 @@ namespace RotatePicConsoleClient.RotatePicService {
             return base.Channel.RotatePicAsync(i);
         }
         
-        public void StartRotatePic(string path, int angle) {
-            base.Channel.StartRotatePic(path, angle);
+        public string StartRotatePic(string path, int angle) {
+            return base.Channel.StartRotatePic(path, angle);
         }
         
-        public System.Threading.Tasks.Task StartRotatePicAsync(string path, int angle) {
+        public System.Threading.Tasks.Task<string> StartRotatePicAsync(string path, int angle) {
             return base.Channel.StartRotatePicAsync(path, angle);
         }
     }

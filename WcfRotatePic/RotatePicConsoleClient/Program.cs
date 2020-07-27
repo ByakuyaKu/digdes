@@ -13,7 +13,6 @@ namespace RotatePicConsoleClient
         static void Main(string[] args)
         {
             RotatePicService.RotatePicServiceClient client = new RotatePicServiceClient();
-
             Console.WriteLine("Enter path to folder: ");
             string Path = Console.ReadLine();
 
@@ -26,7 +25,9 @@ namespace RotatePicConsoleClient
                 Console.WriteLine("Error! Wrong key!");
                 Angle = InputAngle();
             }
-            client.StartRotatePic(Path, angleindex);
+            
+            Console.WriteLine(client.StartRotatePic(Path, angleindex));
+            Console.ReadKey();
         }
 
         private static string InputAngle()

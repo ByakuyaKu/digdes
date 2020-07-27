@@ -15,10 +15,6 @@ namespace WcfRotatePic
         void RotatePic(int i);
 
         [OperationContract]
-        void StartRotatePic(string path, int angle);
-
-        //[OperationContract]
-        //void GetInputData(string path, int angle);
-
+        string StartRotatePic(string path, int angle);
     }
 }
