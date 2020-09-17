@@ -1,0 +1,91 @@
+.mysite{
+    display: flex; /* включаем режим Flexbox */
+    flex-direction: column; /* дочерние элементы будут располагаться сверху вниз */
+    text-align: left;
+    padding: 50px 250px;
+}
+	
+.content{
+    display: flex; /* включаем режим Flexbox */
+    flex-direction: column; /* дочерние элементы будут располагаться слева на право */
+    font-size: 16pt;
+}
+.row{
+    flex: 1; /* столбцы будут иметь одинаковый размер при изменении разрешения */
+}
+.footer{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 100px;				
+}
+
+.tittle-content {
+    font-size: 200%; 
+    border-bottom: 2px solid maroon; 
+    font-weight: normal; 
+    padding-bottom: 5px; 
+   }
+
+.header{
+    display: flex;
+}
+
+.header-img{
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative; 
+}
+
+.content-img{
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+}
+
+.maintittle{
+    font-size: 500%;
+    color: ivory;
+    font-weight: normal;
+    position: absolute; 
+    left: 50px; 
+    top: 0px;
+}
+
+.links{
+    list-style-type: square;
+}
+
+.form-check{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 10px;
+    background-color: DarkGrey;
+}
+
+.form-control{
+    width: 25%;
+}
+
+.form-check:hover {
+    background-color: Gray;
+}
+
+.btn-submit:hover{
+    background-color: Brown;
+}
+
+.btn-submit{
+    background-color: maroon;
+    border: 0px solid;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14pt;
+}
