@@ -3,6 +3,9 @@
     flex-direction: column; /* дочерние элементы будут располагаться сверху вниз */
     text-align: left;
     padding: 50px 250px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    background:#FFF;
+    margin-bottom:75px;
 }
 	
 .content{
@@ -12,12 +15,6 @@
 }
 .row{
     flex: 1; /* столбцы будут иметь одинаковый размер при изменении разрешения */
-}
-.footer{
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 100px;				
 }
 
 .tittle-content {
@@ -31,16 +28,12 @@
     display: flex;
 }
 
-.header-img{
-    flex-wrap: wrap;
-    max-width: 100%;
-    position: relative; 
-}
-
+.header-img,
 .content-img{
     flex-wrap: wrap;
     max-width: 100%;
-    position: relative;
+    position: relative; 
+    filter: brightness(0.9);
 }
 
 .maintittle{
@@ -71,11 +64,11 @@
 }
 
 .form-check:hover {
-    background-color: Gray;
+    filter: brightness(0.9);
 }
 
 .btn-submit:hover{
-    background-color: Brown;
+    filter: brightness(1.15);
 }
 
 .btn-submit{
@@ -88,4 +81,28 @@
     cursor: pointer;
     margin-top: 10px;
     font-size: 14pt;
+    font-weight: bold;
+}
+
+.footer-parallax {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:-1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+}
+@media screen and (max-width:767px) {
+    .footer-parallax {
+        position:static;
+    }
+}
+
+.money{
+    border: 2px solid maroon;
+    border-radius: 4px;
+    border-color: maroon;
 }
